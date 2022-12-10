@@ -48,7 +48,7 @@ class TestLogin(unittest.TestCase):
         #登陆成功后，退出账号
         self.driver.find_element_by_xpath('//*[@title="退出"]').click()
 
-    @parameterized.expand(get_data('login_failed_data.json'))
+    @parameterized.expand(get_data('login_failed_data.json'))#登陆失败用例
     def test02_login_failed(self,username,password,code,expect):   #登录失败用例
         # logging.info('测试数据为：',username,password,code)
         self.index_proxy.click_login_button()

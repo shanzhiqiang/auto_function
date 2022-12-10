@@ -1,0 +1,32 @@
+{
+  "login01": {
+    "username": "13099999999",
+    "password": "123456",
+    "code": "8888",
+    "expect": "账号不存在"
+  },
+  "login02": {
+    "username": "15010882898",
+    "password": "654312",
+    "code": "8888",
+    "expect": "密码错误"
+  },
+  "login03": {
+    "username": "",
+    "password": "123456",
+    "code": "8888",
+    "expect": "用户名不能为空"
+  },
+  "login04": {
+    "username": "15010882898",
+    "password": "",
+    "code": "8888",
+    "expect": "密码不能为空"
+  },
+  "login05": {
+    "username": "15010882898",
+    "password": "123456",
+    "code": "",
+    "expect": "验证码不能为空"
+  }
+}

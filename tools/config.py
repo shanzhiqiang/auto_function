@@ -1,3 +1,4 @@
+import os
 import time
 import json
 from logging.handlers import TimedRotatingFileHandler
@@ -14,12 +15,14 @@ def get_tips_info():
 #定义读取测试数据的方法
 def get_data(filename):
     result = []
-    with open('../data/'+filename,encoding='utf8') as f:
+    with open(BASE_PATH+'/data/'+filename,encoding='utf8') as f:
         data = json.load(f)
         for value in data.values():
             result.append((value.values()))
         return result
 
+
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #打印日志
 def get_log():
     # 创建日志器

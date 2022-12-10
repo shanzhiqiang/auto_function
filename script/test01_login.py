@@ -6,7 +6,7 @@ from parameterized import parameterized
 
 from page.index_page import IndexProxy
 from page.login_page import LoginProxy
-from tools.config import get_tips_info, get_data
+from tools.config import get_tips_info, get_data, BASE_PATH
 from utils import DriverUtil
 
 
@@ -43,7 +43,7 @@ class TestLogin(unittest.TestCase):
         try:
             self.assertIn('我的账户',self.driver.title)
         except Exception as e:
-            self.driver.get_screenshot_as_file('../shot/{}.png'.format(time.strftime('%y%m%d%H%M%S')))
+            self.driver.get_screenshot_as_file(BASE_PATH+'/shot/{}.png'.format(time.strftime('%y%m%d%H%M%S')))
             raise e
         #登陆成功后，退出账号
         self.driver.find_element_by_xpath('//*[@title="退出"]').click()
@@ -59,5 +59,5 @@ class TestLogin(unittest.TestCase):
         try:
             self.assertIn(expect, get_tips_info())
         except Exception as e:
-            self.driver.get_screenshot_as_file('../shot/{}.png'.format(time.strftime('%y%m%d%H%M%S')))
+            self.driver.get_screenshot_as_file(BASE_PATH+'/shot/{}.png'.format(time.strftime('%y%m%d%H%M%S')))
             raise e

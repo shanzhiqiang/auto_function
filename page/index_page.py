@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from base.base_page import BasePage, BaseHandle
 
 
-#创建对象库层
+#创建对象库层  git
 class IndexPage(BasePage):
     #初始化驱动对象
 

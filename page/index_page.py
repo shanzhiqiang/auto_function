@@ -6,6 +6,7 @@ from base.base_page import BasePage, BaseHandle
 #创建对象库层
 class IndexPage(BasePage):
     #初始化驱动对象
+
     def __init__(self):
         super().__init__()
         #定义元素的定位信息：定位策略，定位依据
